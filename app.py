@@ -152,18 +152,18 @@ class VentanaFinal:
             label_imagen.pack(pady=10)
         elif self.resultado == "empate":
             imagen_empate = tk.PhotoImage(file="empate.png")
-            imagen_empate_resized = imagen_empate.subsample(2, 2)  # Reducir el tamaño de la imagen
+            imagen_empate_resized = imagen_empate.subsample(2, 2) 
             label_imagen = tk.Label(self.root, image=imagen_empate_resized)
             label_imagen.image = imagen_empate_resized
             label_imagen.pack(pady=10)
 
     def jugar_de_nuevo(self):
-        self.root.destroy()  # Cierra la ventana "Resultado Final"
-        self.juego.reiniciar_juego()  # Llama al método reiniciar_juego de la clase Juego
+        self.root.destroy()  
+        self.juego.reiniciar_juego() 
 
     def registrar_nuevos_nombres(self):
-        self.root.destroy()  # Cierra la ventana "Resultado Final"
-        self.juego.iniciar()  # Llama al método iniciar de la clase Juego
+        self.root.destroy()  
+        self.juego.iniciar()  
 
 def main():
     JuegoUno = Juego()
